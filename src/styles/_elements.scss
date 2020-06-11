@@ -44,7 +44,7 @@
   content: none;
 }
 
-.pagination__item_active {
+.pagination__item_active, .pagination__item_completed {
   border: 2px solid $main-accent-color;
 }
 

@@ -49,11 +49,11 @@ function setPlugins() {
         useShortDoctype: isProductionMode,
       },
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: path.resolve(__dirname, 'src/assets/favicon.ico'), to: path.resolve(__dirname, 'dist') },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: path.resolve(__dirname, 'src/assets/favicon.ico'), to: path.resolve(__dirname, 'dist') },
+    //   ],
+    // }),
     new MiniCssExtractPlugin({
       filename: createFileName('css'),
     }),

@@ -101,7 +101,8 @@
 
 .input-wrapper_display_inline {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-wrapper_content_around-edges {
@@ -137,15 +138,23 @@
 
 .form__input_half_left {
   width: 180px;
-  border-right: 0.5px;
+  border-right: 1px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .form__input_half_right {
-  width: 177px;
+  width: 180px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.form__input_margin_bottom {
+  margin-bottom: 10px;
+}
+
+.form__input_type_date {
+  width: 175px;
 }
 
 .form__textarea {
@@ -245,6 +254,22 @@
   background-image: url("../assets/icons/arrow-right-black.svg");
 }
 
+.button_icon_add {
+  position: relative;
+}
+
+.button_icon_add::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: $main-accent-color;
+  font-size: $font-size-big;
+  font-weight: $font-weight-bold;
+}
+
 .button_additional {
   position: absolute;
   top: 5px;
@@ -265,10 +290,15 @@
   font-weight: $font-weight-bold;
 }
 
-.button_additional:hover::before {
+.button_additional:hover::before,
+.button_icon_add:hover::before {
   color: $main-background-color;
 }
 
 .button_width_fixed {
   width: 165px;
+}
+
+.button_width_auto {
+  width: 100%;
 }

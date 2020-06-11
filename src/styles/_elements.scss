@@ -1,3 +1,10 @@
+// Paragraph
+
+.paragraph {
+  margin: 0;
+  padding: 0;
+}
+
 // Pagination elements
 
 .pagination__list {
@@ -44,7 +51,8 @@
   content: none;
 }
 
-.pagination__item_active, .pagination__item_completed {
+.pagination__item_active,
+.pagination__item_completed {
   border: 2px solid $main-accent-color;
 }
 
@@ -91,12 +99,29 @@
   margin-bottom: 25px;
 }
 
+.input-wrapper_display_inline {
+  position: relative;
+  display: inline-flex;
+}
+
+.input-wrapper_content_around-edges {
+  display: flex;
+  justify-content: space-between;
+}
+
 .form__label {
   display: block;
   padding-left: 25px;
   padding-bottom: 10px;
   color: $main-text-color;
   font-size: $font-size-regular;
+}
+
+.form__explanation {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  color: $secondary-text-color-darken;
+  font-size: $font-size-smallest;
 }
 
 .form__input {
@@ -108,6 +133,33 @@
   border: 1px solid $main-border-color;
   border-radius: 5px;
   font-size: $font-size-small;
+}
+
+.form__input_half_left {
+  width: 180px;
+  border-right: 0.5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form__input_half_right {
+  width: 177px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form__textarea {
+  position: relative;
+  width: 361px;
+  height: 119px;
+  padding: 15px 25px;
+  background-color: $main-background-color;
+  border: 1px solid $main-border-color;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: $font-size-small;
+  line-height: 18px;
+  resize: none;
 }
 
 .form__select {
@@ -164,32 +216,59 @@
 }
 
 .button_icon_right-arrow {
-  background-image: url('../assets/icons/arrow-right-black.svg');
+  background-image: url("../assets/icons/arrow-right-black.svg");
   background-repeat: no-repeat;
   background-position: right 10px top 50%;
 }
 
 .button_icon_right-arrow:hover {
-  background-image: url('../assets/icons/arrow-right-white.svg');
+  background-image: url("../assets/icons/arrow-right-white.svg");
 }
 
 .button_icon_left-arrow {
-  background-image: url('../assets/icons/arrow-left-black.svg');
+  background-image: url("../assets/icons/arrow-left-black.svg");
   background-repeat: no-repeat;
   background-position: left 10px top 50%;
 }
 
 .button_icon_left-arrow:hover {
-  background-image: url('../assets/icons/arrow-left-white.svg');
+  background-image: url("../assets/icons/arrow-left-white.svg");
 }
 
 .button_filled_right-arrow {
-  background-image: url('../assets/icons/arrow-right-white.svg');
+  background-image: url("../assets/icons/arrow-right-white.svg");
   background-repeat: no-repeat;
   background-position: right 10px top 50%;
 }
 
 .button_filled_right-arrow:hover {
-  background-image: url('../assets/icons/arrow-right-black.svg');
+  background-image: url("../assets/icons/arrow-right-black.svg");
 }
 
+.button_additional {
+  position: absolute;
+  top: 5px;
+  right: -50px;
+  width: 39px;
+  height: 39px;
+}
+
+.button_additional::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: $main-accent-color;
+  font-size: $font-size-big;
+  font-weight: $font-weight-bold;
+}
+
+.button_additional:hover::before {
+  color: $main-background-color;
+}
+
+.button_width_fixed {
+  width: 165px;
+}

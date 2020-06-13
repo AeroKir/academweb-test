@@ -12,14 +12,14 @@
   <div class="page__content">
     <div class="pagination">
       <ul class="pagination__list">
-        <li class="pagination__item pagination__item_active"></li>
-        <li class="pagination__item"></li>
-        <li class="pagination__item"></li>
+        <li class="pagination__item pagination__item_active" id="pagination-first-item"></li>
+        <li class="pagination__item" id="pagination-second-item"></li>
+        <li class="pagination__item" id="pagination-third-item"></li>
       </ul>
     </div>
 
     <!-- First form begin  -->
-    <form class="form">
+    <form class="form" id="form-first-step">
       <fieldset class="form__fieldset">
         <legend class="form__legend">Основна інформація</legend>
 
@@ -59,7 +59,7 @@
           <!-- Dynamically created content will appear here -->
         </div>
 
-        <button class="button button_centered button_icon_right-arrow" type="button">
+        <button class="button button_centered button_icon_right-arrow" type="button" id="form-button-goto-second-step">
           <span class="button__text">Перейти далі</span>
         </button>
       </fieldset>
@@ -67,7 +67,7 @@
     <!-- First form end  -->
 
     <!-- Second form begin -->
-    <form class="form" hidden>
+    <form class="form" id="form-second-step" hidden>
       <fieldset class="form__fieldset">
         <legend class="form__legend">Про кухаря</legend>
 
@@ -98,10 +98,10 @@
         </div>
 
         <div class="form__input-wrapper input-wrapper_content_around-edges">
-          <button class="button button_width_fixed button_icon_left-arrow" type="button">
+          <button class="button button_width_fixed button_icon_left-arrow" type="button" id="form-button-back-to-first-step">
             <span class="button__text">Назад</span>
           </button>
-          <button class="button button_width_fixed button_filled button_filled_right-arrow" type="button">
+          <button class="button button_width_fixed button_filled button_filled_right-arrow" type="button" id="form-button-goto-third-step">
             <span class="button__text">Далі</span>
           </button>
         </div>
@@ -111,7 +111,7 @@
     <!-- Second form end -->
 
     <!-- Third form begin -->
-    <form class="form" hidden>
+    <form class="form" id="form-third-step" hidden>
       <fieldset class="form__fieldset">
         <legend class="form__legend">Освіта та досвід роботи</legend>
 
@@ -132,7 +132,7 @@
         </div>
 
         <div class="form__input-wrapper input-wrapper_content_around-edges">
-          <button class="button button_width_fixed button_icon_left-arrow" type="button">
+          <button class="button button_width_fixed button_icon_left-arrow" type="button" id="form-button-back-to-second-step">
             <span class="button__text">Назад</span>
           </button>
           <button class="button button_width_fixed button_filled button_filled_right-arrow" type="submit">

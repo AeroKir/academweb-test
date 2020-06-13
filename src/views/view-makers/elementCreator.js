@@ -6,6 +6,7 @@ export function elementCreator(params) {
   element.setAttribute('placeholder', params.placeholder);
   element.setAttribute('for', params.labelFor);
   element.setAttribute('value', params.value);
+  element.setAttribute('name', params.name);
 
   element.innerText = params.elementInnerText;
 
@@ -21,10 +22,11 @@ export function createListContent(contentModel) {
       className: element.className,
       type: element.type,
       placeholder: element.placeholder,
-      elementInnerText: element.labelTitle,
+      elementInnerText: element.elementInnerText,
       labelFor: element.labelFor,
       id: element.id,
       value: element.value,
+      name: element.name,
       optionName: element.optionName,
     });
 

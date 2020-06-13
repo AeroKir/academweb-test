@@ -1,4 +1,4 @@
-import { elementCreator, createListContent } from '../../view-makers/elementCreator';
+import { createListContent } from '../../view-makers/elementCreator';
 import { thirdRegisterForm } from '../../../models/appDataModel';
 
 const education = document.getElementById('education-field');

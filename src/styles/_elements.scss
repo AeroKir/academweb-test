@@ -125,6 +125,10 @@
   font-size: $font-size-smallest;
 }
 
+.form__explanation_padding_top {
+  padding-top: 10px;
+}
+
 .form__input {
   position: relative;
   width: 361px;
@@ -153,8 +157,13 @@
   margin-bottom: 10px;
 }
 
+.form__input_margin_right {
+  margin-right: 10px;
+}
+
 .form__input_type_date {
   width: 175px;
+  padding: 15px 10px 15px 25px;
 }
 
 .form__textarea {

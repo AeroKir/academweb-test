@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body class="page__body">
+  <div class="page__content">
+    <div class="pagination">
+      <ul class="pagination__list">
+        <li class="pagination__item pagination__item_completed"></li>
+        <li class="pagination__item pagination__item_completed"></li>
+        <li class="pagination__item pagination__item_active"></li>
+      </ul>
+    </div>
+    <form class="form">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Освіта та досвід роботи</legend>
+
+        <div class="form__input-wrapper">
+          <label class="form__label" for="education">Освіта</label>
+          <input class="form__input form__input_margin_bottom" id="education" type="text" placeholder="Місце навчання"
+            required>
+          <input class="form__input" id="speciality" type="text" placeholder="Спеціальність" required>
+        </div>
+
+        <div class="form__input-wrapper">
+          <p class="paragraph form__explanation">
+            Виберіть дату початку та закінчення навчання в цьому закладі.
+          </p>
+          <div class="input-wrapper_display_inline">
+            <input class="form__input form__input_type_date form__input_margin_bottom" id="date-begin" type="date"
+              required>
+            <input class="form__input form__input_type_date form__input_margin_bottom" id="date-end" type="date"
+              required>
+          </div>
+          <textarea class="form__textarea form__input_margin_bottom" name="textarea" id="about-user" cols="30" rows="10"
+            placeholder="Декілька слів про навчання..."></textarea>
+          <button class="button button_width_auto button_icon_add" type="button">
+            <span class="button__text">Додати ще одну освіту</span>
+          </button>
+        </div>
+
+        <div class="page__divider"></div>
+
+        <div class="form__input-wrapper">
+          <label class="form__label" for="place-of-work">Досвід роботи</label>
+          <input class="form__input form__input_margin_bottom" id="place-of-work" type="text" placeholder="Місце роботи"
+            required>
+          <input class="form__input" id="position" type="text" placeholder="Посада" required>
+        </div>
+
+        <div class="form__input-wrapper">
+          <p class="paragraph form__explanation">
+            Виберіть дату початку та закінчення роботи в цій організації.
+          </p>
+          <div class="input-wrapper_display_inline">
+            <input class="form__input form__input_type_date form__input_margin_bottom" id="work-date-begin" type="date"
+              required>
+            <input class="form__input form__input_type_date form__input_margin_bottom" id="work-date-end" type="date"
+              required>
+          </div>
+          <textarea class="form__textarea form__input_margin_bottom" name="textarea" id="working-experience" cols="30" rows="10"
+            placeholder="Декілька слів про досвід роботи на цій посаді..."></textarea>
+          <button class="button button_width_auto button_icon_add" type="button">
+            <span class="button__text">Додати ще один досвід роботи</span>
+          </button>
+        </div>
+
+        <div class="form__input-wrapper input-wrapper_content_around-edges">
+          <button class="button button_width_fixed button_icon_left-arrow" type="button">
+            <span class="button__text">Назад</span>
+          </button>
+          <button class="button button_width_fixed button_filled button_filled_right-arrow" type="submit">
+            <span class="button__text">Відправити</span>
+          </button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+
+</html>

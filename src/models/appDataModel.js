@@ -88,6 +88,14 @@ export const firstRegisterForm = {
       value: '',
       required: true,
     },
+    {
+      tagName: 'button',
+      className: 'button button__inner-input',
+      id: 'show-password-button',
+      type: 'button',
+      value: '',
+      elementInnerText: null,
+    },
   ],
 
   userPasswordConfirmField: [

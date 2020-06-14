@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const postcssPresetEnv = require('postcss-preset-env');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -56,6 +57,10 @@ function setPlugins() {
     // }),
     new MiniCssExtractPlugin({
       filename: createFileName('css'),
+    }),
+    postcssPresetEnv({
+      autoprefixer: { flexbox: true },
+      browsers: 'last 2 versions',
     }),
   ];
 
@@ -125,6 +130,7 @@ module.exports = {
             },
           },
           'css-loader',
+          'postcss-loader',
           'sass-loader',
         ],
       },

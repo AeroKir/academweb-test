@@ -7,6 +7,7 @@ export function elementCreator(params) {
   element.setAttribute('for', params.labelFor);
   element.setAttribute('value', params.value);
   element.setAttribute('name', params.name);
+  element.setAttribute('required', params.required);
 
   element.innerText = params.elementInnerText;
 
@@ -28,6 +29,7 @@ export function createListContent(contentModel) {
       value: element.value,
       name: element.name,
       optionName: element.optionName,
+      required: element.required,
     });
 
     contentList.push(node);

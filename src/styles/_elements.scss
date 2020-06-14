@@ -96,6 +96,7 @@
 }
 
 .form__input-wrapper {
+  position: relative;
   margin-bottom: 25px;
 }
 
@@ -311,4 +312,26 @@
 
 .button_width_auto {
   width: 100%;
+}
+
+.button__inner-input {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background-image: url("../assets/icons/eye-icon.svg");
+  background-size: 30px 20px;
+  background-repeat: no-repeat;
+  background-position: right 2px top 50%;
+  outline: none;
+}
+
+.button__inner-input:hover {
+  background-color: $main-background-color;
+}
+
+.button__inner-input_active {
+  background-image: url("../assets/icons/eye-crossed-out-icon.svg");
 }

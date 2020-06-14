@@ -1,4 +1,6 @@
-// Switching between forms
+/**
+ * Switching between forms
+ */
 
 const paginationFirst = document.getElementById('pagination-first-item');
 const paginationSecond = document.getElementById('pagination-second-item');
@@ -41,3 +43,31 @@ buttonBackToSecondStep.addEventListener('click', () => {
   paginationSecond.classList.remove('pagination__item_completed');
   paginationThird.classList.remove('pagination__item_active');
 });
+
+/**
+ * Show/hide password
+ */
+
+const passwordInput = document.getElementById('user-password');
+const showPasswordButton = document.getElementById('show-password-button');
+
+function showPassword() {
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    showPasswordButton.classList.add('button__inner-input_active');
+  } else {
+    passwordInput.type = 'password';
+    showPasswordButton.classList.remove('button__inner-input_active');
+  }
+}
+
+function showButtonTitle() {
+  if (passwordInput.type === 'password') {
+    showPasswordButton.title = 'Показати пароль';
+  } else {
+    showPasswordButton.title = 'Приховати пароль';
+  }
+}
+
+showPasswordButton.addEventListener('mouseover', showButtonTitle);
+showPasswordButton.addEventListener('click', showPassword);

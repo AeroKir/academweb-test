@@ -1,22 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Cook register form</title>
 </head>
 
 <body class="page__body">
-  <form action="">
-    <label for=""><input type="text"></label>
-    <label for=""><input type="text"></label>
-    <label for=""><input type="text"></label>
-    <label for=""><input type="text"></label>
-    <label for=""><input type="text"></label>
-    <label for=""><input type="text"></label>
-  </form>
+  <div class="page__content">
+    <div class="pagination">
+      <ul class="pagination__list">
+        <li class="pagination__item pagination__item_active" id="pagination-first-item"></li>
+        <li class="pagination__item" id="pagination-second-item"></li>
+        <li class="pagination__item" id="pagination-third-item"></li>
+      </ul>
+    </div>
+
+    <!-- First form begin  -->
+    <form class="form" id="form-first-step">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Основна інформація</legend>
+
+        <div class="form__input-wrapper" id="user-name-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="user-surname-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="user-city-field">
+          <label class="form__label" for="user-city">Місто</label>
+          <select class="form__input form__select" name="city" id="user-city">
+            <option class="select__option" disabled selected>Виберіть своє місто</option>
+            <option class="select__option" value="Київ">Київ</option>
+            <option class="select__option" value="Харків">Харків</option>
+            <option class="select__option" value="Запоріжжя">Запоріжжя</option>
+            <option class="select__option" value="Львів">Львів</option>
+            <option class="select__option" value="Одеса">Одеса</option>
+          </select>
+        </div>
+
+        <div class="form__input-wrapper" id="user-email-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="user-phone-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="user-password-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="confirm-user-password-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <button class="button button_centered button_icon_right-arrow" type="submit" id="form-button-goto-second-step">
+          <span class="button__text">Перейти далі</span>
+        </button>
+      </fieldset>
+    </form>
+    <!-- First form end  -->
+
+    <!-- Second form begin -->
+    <form class="form" id="form-second-step" hidden>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Про кухаря</legend>
+
+        <div class="form__input-wrapper" id="cousine-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="language-field">
+          <!-- Dynamically created content will appear here -->
+          <div class="input-wrapper_display_inline" id="language-field-inputs">
+            <!-- Dynamically created content will appear here -->
+            <select class="form__input form__input_half_right form__select" name="language" id="language-proficiency">
+              <option class="select__option" disabled selected>Рівень володіння</option>
+              <option class="select__option" value="Початківець">Початківець</option>
+              <option class="select__option" value="Середній">Середній</option>
+              <option class="select__option" value="Прошарений">Прошарений</option>
+            </select>
+            <button class="button button_additional" type="button" title="Додати мову"></button>
+          </div>
+        </div>
+
+        <div class="form__input-wrapper" id="awards-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper" id="about-user-field">
+          <!-- Dynamically created content will appear here -->
+        </div>
+
+        <div class="form__input-wrapper input-wrapper_content_around-edges">
+          <button class="button button_width_fixed button_icon_left-arrow" type="button" id="form-button-back-to-first-step">
+            <span class="button__text">Назад</span>
+          </button>
+          <button class="button button_width_fixed button_filled button_filled_right-arrow" type="submit" id="form-button-goto-third-step">
+            <span class="button__text">Далі</span>
+          </button>
+        </div>
+
+      </fieldset>
+    </form>
+    <!-- Second form end -->
+
+    <!-- Third form begin -->
+    <form class="form" id="form-third-step" hidden>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Освіта та досвід роботи</legend>
+
+        <div class="form__input-wrapper" id="education-field">
+          <!-- Dynamically created content will appear here -->
+          <button class="button button_width_auto button_icon_add" type="button">
+            <span class="button__text">Додати ще одну освіту</span>
+          </button>
+        </div>
+
+        <div class="page__divider"></div>
+
+        <div class="form__input-wrapper" id="working-experience-field">
+          <!-- Dynamically created content will appear here -->
+          <button class="button button_width_auto button_icon_add" type="button">
+            <span class="button__text">Додати ще один досвід роботи</span>
+          </button>
+        </div>
+
+        <div class="form__input-wrapper input-wrapper_content_around-edges">
+          <button class="button button_width_fixed button_icon_left-arrow" type="button" id="form-button-back-to-second-step">
+            <span class="button__text">Назад</span>
+          </button>
+          <button class="button button_width_fixed button_filled button_filled_right-arrow" type="submit">
+            <span class="button__text">Відправити</span>
+          </button>
+        </div>
+
+      </fieldset>
+    </form>
+    <!-- Third form end -->
+
+  </div>
+
 </body>
 
 </html>

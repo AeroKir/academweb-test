@@ -1,0 +1,351 @@
+// Paragraph
+
+.paragraph {
+  margin: 0;
+  padding: 0;
+}
+
+// Pagination elements
+
+.pagination__list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0 0 38px 0;
+  padding: 0;
+  counter-reset: list;
+}
+
+.pagination__item {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: 2px solid $secondary-border-color;
+  border-radius: 5px;
+}
+
+.pagination__item::before {
+  counter-increment: list;
+  content: counter(list);
+  font-size: $font-size-big;
+  font-weight: $font-weight-bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.pagination__item::after {
+  content: "";
+  position: absolute;
+  border-color: $secondary-border-color;
+  border-style: solid;
+  border-width: 1px;
+  width: 54px;
+  top: 23px;
+  left: 46px;
+}
+
+.pagination__item:last-child::after {
+  content: none;
+}
+
+.pagination__item_active,
+.pagination__item_completed {
+  border: 2px solid $main-accent-color;
+}
+
+.pagination__item_completed::before {
+  content: "";
+  background-image: url("../assets/icons/completed-icon.svg");
+  background-size: 28px 28px;
+  height: 28px;
+  width: 28px;
+}
+
+.pagination__item_completed::after {
+  content: "";
+  position: absolute;
+  border-color: $main-accent-color;
+  border-style: solid;
+  border-width: 1px;
+  width: 54px;
+  top: 23px;
+  left: 46px;
+}
+
+// Form elements
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  border-width: 0;
+}
+
+.form__legend {
+  margin-bottom: 35px;
+  color: $main-text-color;
+  font-size: $font-size-big;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.form__input-wrapper {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-wrapper_display_inline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-wrapper_content_around-edges {
+  display: flex;
+  justify-content: space-between;
+  width: 361px;
+}
+
+.form__label {
+  display: block;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  color: $main-text-color;
+  font-size: $font-size-regular;
+}
+
+.form__explanation {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  color: $secondary-text-color-darken;
+  font-size: $font-size-smallest;
+}
+
+.form__explanation_padding_top {
+  padding-top: 10px;
+}
+
+.form__input {
+  position: relative;
+  width: 361px;
+  height: 49px;
+  padding: 15px 25px;
+  background-color: $main-background-color;
+  border: 1px solid $main-border-color;
+  border-radius: 5px;
+  font-size: $font-size-small;
+}
+
+.form__input_wrong {
+  border-color: $error-color;
+}
+
+.form__input-wrong-message {
+  position: absolute;
+  top: 95%;
+  border-color: $error-color;
+  color: $error-color;
+  font-size: $font-size-small;
+  padding-left: 25px;
+  padding-top: 5px;
+}
+
+.form__input_half_left {
+  width: 180px;
+  border-right: 1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form__input_half_right {
+  width: 180px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form__input_margin_bottom {
+  margin-bottom: 10px;
+}
+
+.form__input_margin_right {
+  margin-right: 10px;
+}
+
+.form__input_type_date {
+  width: 175px;
+  padding: 15px 10px 15px 25px;
+}
+
+.form__textarea {
+  position: relative;
+  width: 361px;
+  height: 119px;
+  padding: 15px 25px;
+  background-color: $main-background-color;
+  border: 1px solid $main-border-color;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: $font-size-small;
+  line-height: 18px;
+  resize: none;
+}
+
+.form__select {
+  font-size: $font-size-small;
+  color: $main-text-color;
+  line-height: 1.3;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $main-background-color;
+  background-image: url("../assets/icons/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 15px auto;
+}
+
+.select__option {
+  font-size: $font-size-regular;
+}
+
+// Button
+
+.button {
+  background-color: $main-background-color;
+  padding: 18px 18px;
+  border: 1px solid $main-accent-color;
+  border-radius: 5px;
+  color: $main-text-color;
+  cursor: pointer;
+  font-size: $font-size-regular;
+}
+
+.button__text {
+  padding: 10px 15px;
+}
+
+.button:hover {
+  background-color: $main-accent-color;
+  color: $main-background-color;
+}
+
+.button_filled {
+  background-color: $main-accent-color;
+  color: $main-background-color;
+}
+
+.button_filled:hover {
+  background-color: $main-background-color;
+  color: $main-text-color;
+}
+
+.button_centered {
+  margin: 0 auto;
+}
+
+.button_icon_right-arrow {
+  background-image: url("../assets/icons/arrow-right-black.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+}
+
+.button_icon_right-arrow:hover {
+  background-image: url("../assets/icons/arrow-right-white.svg");
+}
+
+.button_icon_left-arrow {
+  background-image: url("../assets/icons/arrow-left-black.svg");
+  background-repeat: no-repeat;
+  background-position: left 10px top 50%;
+}
+
+.button_icon_left-arrow:hover {
+  background-image: url("../assets/icons/arrow-left-white.svg");
+}
+
+.button_filled_right-arrow {
+  background-image: url("../assets/icons/arrow-right-white.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+}
+
+.button_filled_right-arrow:hover {
+  background-image: url("../assets/icons/arrow-right-black.svg");
+}
+
+.button_icon_add {
+  position: relative;
+}
+
+.button_icon_add::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: $main-accent-color;
+  font-size: $font-size-big;
+  font-weight: $font-weight-bold;
+}
+
+.button_additional {
+  position: absolute;
+  top: 5px;
+  right: -50px;
+  width: 39px;
+  height: 39px;
+}
+
+.button_additional::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: $main-accent-color;
+  font-size: $font-size-big;
+  font-weight: $font-weight-bold;
+}
+
+.button_additional:hover::before,
+.button_icon_add:hover::before {
+  color: $main-background-color;
+}
+
+.button_width_fixed {
+  width: 165px;
+}
+
+.button_width_auto {
+  width: 100%;
+}
+
+.button__inner-input {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background-image: url("../assets/icons/eye-icon.svg");
+  background-size: 30px 20px;
+  background-repeat: no-repeat;
+  background-position: right 2px top 50%;
+  outline: none;
+}
+
+.button__inner-input:hover {
+  background-color: $main-background-color;
+}
+
+.button__inner-input_active {
+  background-image: url("../assets/icons/eye-crossed-out-icon.svg");
+}

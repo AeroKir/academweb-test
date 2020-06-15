@@ -142,6 +142,20 @@
   font-size: $font-size-small;
 }
 
+.form__input_wrong {
+  border-color: $error-color;
+}
+
+.form__input-wrong-message {
+  position: absolute;
+  top: 95%;
+  border-color: $error-color;
+  color: $error-color;
+  font-size: $font-size-small;
+  padding-left: 25px;
+  padding-top: 5px;
+}
+
 .form__input_half_left {
   width: 180px;
   border-right: 1px;

@@ -48,26 +48,52 @@ buttonBackToSecondStep.addEventListener('click', () => {
  * Show/hide password
  */
 
-const passwordInput = document.getElementById('user-password');
-const showPasswordButton = document.getElementById('show-password-button');
+const passwordInputs = [...document.querySelectorAll('input[type="password"]')];
+const passwordInput = passwordInputs[0];
+const passwordConfirmInput = passwordInputs[1];
+
+const showPasswordButtons = [...document.querySelectorAll('.button__inner-input')];
+const firstShowPasswordButton = showPasswordButtons[0];
+const secondShowPasswordButton = showPasswordButtons[1];
 
 function showPassword() {
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    showPasswordButton.classList.add('button__inner-input_active');
+    firstShowPasswordButton.classList.add('button__inner-input_active');
   } else {
     passwordInput.type = 'password';
-    showPasswordButton.classList.remove('button__inner-input_active');
+    firstShowPasswordButton.classList.remove('button__inner-input_active');
+  }
+}
+
+function showConfirmedPassword() {
+  if (passwordConfirmInput.type === 'password') {
+    passwordConfirmInput.type = 'text';
+    secondShowPasswordButton.classList.add('button__inner-input_active');
+  } else {
+    passwordConfirmInput.type = 'password';
+    secondShowPasswordButton.classList.remove('button__inner-input_active');
   }
 }
 
 function showButtonTitle() {
   if (passwordInput.type === 'password') {
-    showPasswordButton.title = 'Показати пароль';
+    firstShowPasswordButton.title = 'Показати пароль';
   } else {
-    showPasswordButton.title = 'Приховати пароль';
+    firstShowPasswordButton.title = 'Приховати пароль';
   }
 }
 
-showPasswordButton.addEventListener('mouseover', showButtonTitle);
-showPasswordButton.addEventListener('click', showPassword);
+function showSecondButtonTitle() {
+  if (passwordConfirmInput.type === 'password') {
+    secondShowPasswordButton.title = 'Показати пароль';
+  } else {
+    secondShowPasswordButton.title = 'Приховати пароль';
+  }
+}
+
+firstShowPasswordButton.addEventListener('mouseover', showButtonTitle);
+firstShowPasswordButton.addEventListener('click', showPassword);
+
+secondShowPasswordButton.addEventListener('mouseover', showSecondButtonTitle);
+secondShowPasswordButton.addEventListener('click', showConfirmedPassword);

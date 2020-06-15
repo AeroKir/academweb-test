@@ -25,7 +25,7 @@ registerForms.forEach((form) => form.addEventListener('change', inputEventHandle
 const errorMessage = elementCreator({
   tagName: 'p',
   className: 'paragraph form__input-wrong-message',
-  elementInnerText: 'Будьласка, заповніть це поле',
+  elementInnerText: 'Будь ласка, заповніть це поле',
 });
 
 function inputErrorHandler(event) {

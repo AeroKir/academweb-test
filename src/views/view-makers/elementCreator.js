@@ -7,7 +7,7 @@ export function elementCreator(params) {
   element.setAttribute('for', params.labelFor);
   element.setAttribute('value', params.value);
   element.setAttribute('name', params.name);
-  element.setAttribute('required', params.required);
+  element.setAttribute('required', '');
 
   element.innerText = params.elementInnerText;
 
@@ -21,13 +21,13 @@ export function createListContent(contentModel) {
     const node = elementCreator({
       tagName: element.tagName,
       className: element.className,
+      id: element.id,
       type: element.type,
+      value: element.value,
+      name: element.name,
       placeholder: element.placeholder,
       elementInnerText: element.elementInnerText,
       labelFor: element.labelFor,
-      id: element.id,
-      value: element.value,
-      name: element.name,
       optionName: element.optionName,
       required: element.required,
     });

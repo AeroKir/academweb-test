@@ -120,6 +120,14 @@ export const firstRegisterForm = {
       value: '',
       required: true,
     },
+    {
+      tagName: 'button',
+      className: 'button button__inner-input',
+      id: 'show-password-button',
+      type: 'button',
+      value: '',
+      elementInnerText: null,
+    },
   ],
 };
 
@@ -197,7 +205,7 @@ export const secondRegisterForm = {
       type: 'text',
       placeholder: '...Chef Award 2017, Global Chef Award 2018',
       value: '',
-      required: false,
+      required: null,
     },
   ],
 
